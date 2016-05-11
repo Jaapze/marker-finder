@@ -1,5 +1,5 @@
 $(function(){
-	$('.storefinder').MarkerFinder({
+	$('.power_stations').MarkerFinder({
 	    googleMapsKey: 'AIzaSyAO5wypAcrxI37yQ0VL5unnkN0DIF1rHJQ',
 	    googleMapsOptions: {
 	    center: {
@@ -9,10 +9,10 @@ $(function(){
 	            zoom: 6,
 	        },
 	    fitBounds: true,
-	    data: '../assets/data/data.json',
+	    data: 'assets/data/data.json',
 	    dataRoot: 'power_stations'
 	});
-	$('.storefinder').MarkerFinder('ready', function(data, map, markers){
+	$('.power_stations').MarkerFinder('ready', function(data, map, markers){
 	    console.debug(data);
 	});
 })
