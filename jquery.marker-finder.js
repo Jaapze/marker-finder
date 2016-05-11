@@ -20,6 +20,7 @@
       },
       zoom: 6,
     },
+    latLngKeys: ['lat', 'lng'],
     fitBounds: false,
     customIcon: false,
     data: {},
@@ -173,7 +174,7 @@
       var _this = this,
           dfd = jQuery.Deferred();
       this._getCoordsByString(value).done(function(data){
-        dfd.resolve(_this._findClosestMarkers(data.lat, data.lng, hideMarkers));
+        dfd.resolve(_this._findClosestMarkers(data[this.options.latLngKeys[0]], data[this.options.latLngKeys[1]], hideMarkers));
       });
       return dfd;
     },
@@ -261,7 +262,7 @@
       for (i = 0; i < this.data.length; i++) {
         var data = this.data[i];
         var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(data.lat, data.lng),
+          position: new google.maps.LatLng(data[this.options.latLngKeys[0]], data[this.options.latLngKeys[1]]),
           map: this.map,
           title: data.title
         });
