@@ -13,6 +13,7 @@ this plugin can be used for building a custom storefinder or something with simi
 			},
 				zoom: 6,
 			},
+		latLngKeys: ['lat', 'lng'],
 		fitBounds: false,
 		customIcon: false,
 		data: {},
