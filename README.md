@@ -87,4 +87,6 @@ Set the bounds to the (visible) markers
 
 ###TODO'S
 * Change marker on select (click)
-* Better variable naming
+* Update this documentation
+* Make some examples
+* Add minified version
