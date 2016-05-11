@@ -1,7 +1,7 @@
 #Marker finder plugin for jQuery
 this plugin can be used for building a custom storefinder or something with similar functionalities.
 
-## options and it't defaults:
+## options and it's defaults:
 
 	{
 		googleMapsKey: '',
