@@ -47,6 +47,10 @@
     this.map = {};
     this.markers = [];
     this.markersToFilter = [];
+    this.prevAddress = {
+      name : '',
+      result : {},
+    };
 
     this.init();
   }
@@ -176,11 +180,32 @@
     closestMarkers: function(value, hideMarkers){
       var _this = this,
           dfd = jQuery.Deferred(),
-          hideMarkers = (hideMarkers === undefined)?true:hideMarkers;
-      this._getCoordsByString(value).done(function(data){
-        _this.resetFilters();
-        dfd.resolve(_this._findClosestMarkers(data[_this.options.latLngKeys[0]], data[_this.options.latLngKeys[1]], hideMarkers));
-      });
+          hideMarkers = (hideMarkers === undefined)?true:hideMarkers,
+          result = [];
+      if(value === '' || !value){
+        // if value is empty
+        this.resetFilters();
+        dfd.resolve(result);
+        return dfd;
+      } else if (this.prevAddress.name === value){
+        // if the user clicks twice return prev result
+        dfd.resolve(this.prevAddress.result);
+        return dfd;
+      }else{
+        this.prevAddress.name = value;
+        this._getCoordsByString(value).done(function(data){
+          if(!data){
+            // if there is no result return empty object
+            _this.resetFilters();
+            dfd.resolve(result);
+            return dfd;
+          }
+          _this.resetFilters();
+          result = _this._findClosestMarkers(data[_this.options.latLngKeys[0]], data[_this.options.latLngKeys[1]], hideMarkers);
+          _this.prevAddress.result = result;
+          dfd.resolve(result);
+        });
+      }
       return dfd;
     },
     
@@ -228,6 +253,8 @@
             'lat' : results[0].geometry.location.lat(),
             'lng' : results[0].geometry.location.lng(),
           });
+        }else{
+          dfd.resolve(false);
         }
       });
       return dfd;
