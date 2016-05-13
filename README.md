@@ -171,6 +171,6 @@ Removes the visible search radius
 
 ###TODO'S
 * Change marker on select (click)
-* Update this documentation
 * Make some examples
 * Add minified version
+* Show home marker on searched from location
