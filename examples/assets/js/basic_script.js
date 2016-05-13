@@ -12,6 +12,7 @@ $(function(){
 	    customIconSizeField: 'iconSize',
 	    fitBounds: true,
 	    searchRadius: 5,
+	    drawSearchRadius: true,
 	    data: 'assets/data/data.json',
 	    dataRoot: 'power_stations'
 	});
