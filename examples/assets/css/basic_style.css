@@ -7,10 +7,10 @@ html{
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #f2f2f2;
 }
 body{
 	font-size: 1rem;
+	background: #f2f2f2;
 }
 *{
 	box-sizing: border-box;
@@ -45,16 +45,19 @@ p{
 	padding: 10px;
 }
 
-.filter button{
-	width: 100%;
-	line-height: 2.5rem;
-	background: #3878C7;
-	color: #fff;
+.search_btn,
+.search_fld{
 	border: none;
+	outline: none;
+	width: 100%;
 }
-.filter input[type=text]{
-	padding: 0 20px;
-	width: 100%;
+
+.search_btn{
 	line-height: 2.5rem;
-	border: none;
+	color: #fff;
+	background: #3878C7;
+}
+.search_fld{
+	padding: 0 20px;
+	line-height: 2.5rem;
 }
