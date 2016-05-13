@@ -28,7 +28,7 @@
     searchFields : ['title'],
     onClickMarker : null,
     distanceUnit : 'km',
-    searchRadius : 80,
+    searchRadius : 50,
   },
   googleMapsLoaded = false,
   googleMapsDoneLoading = false,
@@ -96,6 +96,10 @@
             }
           }
           else{
+            if(!this.data[i][fields[j]]){
+              console.error('searchField is not present in current item');
+              break;
+            }
             if(this.data[i][fields[j]].search(regex) != -1){
               returns.push(this.data[i]);
               found = true;
@@ -170,11 +174,12 @@
     },
     
     closestMarkers: function(value, hideMarkers){
-      hideMarkers = (hideMarkers === undefined)?true:hideMarkers;
       var _this = this,
-          dfd = jQuery.Deferred();
+          dfd = jQuery.Deferred(),
+          hideMarkers = (hideMarkers === undefined)?true:hideMarkers;
       this._getCoordsByString(value).done(function(data){
-        dfd.resolve(_this._findClosestMarkers(data[this.options.latLngKeys[0]], data[this.options.latLngKeys[1]], hideMarkers));
+        _this.resetFilters();
+        dfd.resolve(_this._findClosestMarkers(data[_this.options.latLngKeys[0]], data[_this.options.latLngKeys[1]], hideMarkers));
       });
       return dfd;
     },
