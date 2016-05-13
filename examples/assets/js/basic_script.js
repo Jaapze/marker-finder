@@ -8,6 +8,8 @@ $(function(){
 	        },
 	            zoom: 6,
 	        },
+	    customIconField: 'icon',
+	    customIconSizeField: 'iconSize',
 	    fitBounds: true,
 	    searchRadius: 5,
 	    data: 'assets/data/data.json',

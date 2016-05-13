@@ -1,203 +1,271 @@
 {
 	"power_stations": [{
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 256,
 		"emissions": "406988",
 		"lat": 51.91017,
 		"lng": 4.423916
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 1040,
 		"emissions": "6677210",
 		"lat": 51.957576,
 		"lng": 4.026232
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 110,
 		"emissions": "157991",
 		"lat": 52.076771,
 		"lng": 4.290822
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 83,
 		"emissions": "147029",
 		"lat": 52.164989,
 		"lng": 4.493808
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 77,
 		"emissions": "255714",
 		"lat": 52.164989,
 		"lng": 4.493808
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 315,
 		"emissions": "469077",
 		"lat": 51.9539,
 		"lng": 4.562147
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 247,
 		"emissions": "494759",
 		"lat": 52.102928,
 		"lng": 5.071417
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 320,
 		"emissions": "335280",
 		"lat": 52.040661,
 		"lng": 5.141315
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 870,
 		"emissions": "400218",
 		"lat": 51.942826,
 		"lng": 4.115644
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 92,
 		"emissions": "4922",
 		"lat": 52.011923,
 		"lng": 4.353647
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 426,
 		"emissions": "2177074",
 		"lat": 51.431698,
 		"lng": 3.718908
 	}, {
+		"icon": "assets/img/nuclear_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Nuclear",
 		"power": 485,
 		"emissions": "0",
 		"lat": 51.431698,
 		"lng": 3.718908
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 1245,
 		"emissions": "5881587",
 		"lat": 51.708397,
 		"lng": 4.84378
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 1560,
 		"emissions": "7.800.000",
 		"lat": 53.439457,
 		"lng": 6.861668
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 231,
 		"emissions": "462000",
 		"lat": 50.979749,
 		"lng": 5.809102
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 1230,
 		"emissions": "586857",
 		"lat": 51.686089,
 		"lng": 4.581681
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 1913,
 		"emissions": "713739",
 		"lat": 51.15323,
 		"lng": 5.905109
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 664,
 		"emissions": "2062",
 		"lat": 53.209436,
 		"lng": 6.028117
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 2445,
 		"emissions": "1623948",
 		"lat": 53.435941,
 		"lng": 6.87842
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 800,
 		"emissions": "4000000",
 		"lat": 51.945707,
 		"lng": 4.070134
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 602,
 		"emissions": "2722750",
 		"lat": 51.855313,
 		"lng": 5.835938
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 350,
 		"emissions": "2047",
 		"lat": 52.469116,
 		"lng": 6.109074
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 1000,
 		"emissions": "1418476",
 		"lat": 52.575703,
 		"lng": 5.529383
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 43,
 		"emissions": "86000",
 		"lat": 51.873579,
 		"lng": 4.260192
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 684,
 		"emissions": "1043709",
 		"lat": 52.342957,
 		"lng": 5.012284
 	}, {
+		"icon": "assets/img/coal_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Coal",
 		"power": 630,
 		"emissions": "3.307.886",
 		"lat": 52.405427,
 		"lng": 4.844821
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 435,
 		"emissions": "870.000",
 		"lat": 52.405427,
 		"lng": 4.844821
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 1320,
 		"emissions": "734257",
 		"lat": 53.449219,
 		"lng": 6.863869
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 870,
 		"emissions": "1119570",
 		"lat": 51.447985,
 		"lng": 3.69307
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 430,
 		"emissions": "1292130",
 		"lat": 51.942926,
 		"lng": 4.410891
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 460,
 		"emissions": "1391541",
 		"lat": 51.335093,
 		"lng": 3.796595
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 425,
 		"emissions": "241515",
 		"lat": 51.894241,
 		"lng": 4.349629
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 820,
 		"emissions": "208067",
 		"lat": 51.894241,
 		"lng": 4.349629
 	}, {
+		"icon": "assets/img/gas_icon.svg",
+		"iconSize": "35,30",
 		"fuel": "Gas",
 		"power": 24,
 		"emissions": "48.000",
