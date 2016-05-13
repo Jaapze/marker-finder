@@ -21,7 +21,7 @@ $(function(){
 		$('.filter button').on('click', function(){
 			// Do a search trough the data
 			var address = $('.filter input').val();
-		    $('.power_stations').MarkerFinder('closestMarkers', address, function(data){
+		    $('.power_stations').MarkerFinder('closestMarkers', address).done(function(data){
 		    	console.debug(data);
 		    });
 		});

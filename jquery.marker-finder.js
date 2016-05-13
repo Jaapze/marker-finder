@@ -174,7 +174,7 @@
       this._filterMarkers();
     },
     
-    setBounds: function(all){
+    fitBounds: function(all){
       all = (all === undefined || !all)?false:true;
       var bounds = new google.maps.LatLngBounds();
       var i;
@@ -325,7 +325,7 @@
         this.markers.push(marker);
       }
       this._setMarkerProperties();
-      if(this.options.fitBounds) this.setBounds();
+      if(this.options.fitBounds) this.fitBounds();
     },
     
     _filterMarkers: function(){

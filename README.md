@@ -127,11 +127,11 @@ Get all the values from a filter in the json
 ##### example:
     $('.storefinder').MarkerFinder('getFilterValues', 'categories');
 
-### closestMarkers (address, hideMarkers)
+### closestMarkers (address)
 Find the closest marker within the searchRadius
 
 ##### example:
-    $('.storefinder').MarkerFinder('closestMarkers', 'place', true).done(function(data){
+    $('.storefinder').MarkerFinder('closestMarkers', 'address').done(function(data){
         console.debug(data);
     });
 
@@ -163,11 +163,11 @@ Set a option after the plugin is initialized
         //do your magic here
     });
 
-### setBounds (includeHiddenMarkers)
-Set the bounds to the (visible) markers
+### fitBounds (includeHiddenMarkers)
+Fits the bounds to the (visible) markers
 
 ##### example:
-    $('.storefinder').MarkerFinder('setBounds');
+    $('.storefinder').MarkerFinder('fitBounds');
 
 
 ###TODO'S
