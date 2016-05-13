@@ -176,14 +176,16 @@
     
     fitBounds: function(all){
       all = (all === undefined || !all)?false:true;
-      var bounds = new google.maps.LatLngBounds();
+      var bounds = new google.maps.LatLngBounds(),
+          found = false;
       var i;
       for (i = 0; i < this.markers.length; i++) {
         if(this.markers[i].getVisible() || all) {
             bounds.extend( this.markers[i].getPosition() );
+            found = true;
         }
       }
-      this.map.fitBounds(bounds);
+      if(found) this.map.fitBounds(bounds);
     },
     
     closestMarkers: function(value, hideMarkers){
