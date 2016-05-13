@@ -32,7 +32,7 @@
     onClickMarker : null,
     distanceUnit : 'km',
     searchRadius : 50,
-
+    drawSearchRadius : false
   },
   googleMapsLoaded = false,
   googleMapsDoneLoading = false,
@@ -55,6 +55,7 @@
       name : '',
       result : {},
     };
+    this.searchRadius = false;
 
     this.init();
   }
@@ -213,6 +214,7 @@
           }
           _this.resetFilters();
           result = _this._findClosestMarkers(data[_this.options.latLngFields[0]], data[_this.options.latLngFields[1]], hideMarkers);
+          if(_this.options.drawSearchRadius) _this._drawSearchRadius(data[_this.options.latLngFields[0]], data[_this.options.latLngFields[1]], _this.options.searchRadius);
           _this.prevAddress.result = result;
           dfd.resolve(result);
         });
@@ -220,6 +222,10 @@
       return dfd;
     },
     
+    removeSearchRadius: function(){
+      if(this.searchRadius) this.searchRadius.setMap(null);
+    },
+
     _initializeMaps: function() {
       var dfd = jQuery.Deferred(),
           mapsID = this.options.googleMapsID,
@@ -298,6 +304,19 @@
       if(hideMarkers) this._filterMarkers();
       distances.sort(function(a,b){return a['distance']-b['distance'];});
       return distances;
+    },
+
+    _drawSearchRadius: function(lat, lng, radius)
+    {
+      this.removeSearchRadius();
+      this.searchRadius = new google.maps.Circle({
+        fillColor: '#FF0000',
+        fillOpacity: 0.2,
+        strokeWeight: 0,
+        map: this.map,
+        center: {lat: lat, lng: lng},
+        radius: 1000*radius
+      });
     },
 
     _drawMarkers: function() {
