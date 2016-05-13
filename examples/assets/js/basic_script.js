@@ -22,7 +22,7 @@ $(function(){
 			// Do a search trough the data
 			var address = $('.filter input').val();
 		    $('.power_stations').MarkerFinder('closestMarkers', address).done(function(data){
-		    	console.debug(data);
+		    	$('.power_stations').MarkerFinder('fitBounds');
 		    });
 		});
 		$('.radius_dd').change(function() {
