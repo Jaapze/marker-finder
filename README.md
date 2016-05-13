@@ -4,27 +4,28 @@ this plugin can be used for building a custom storefinder or something with simi
 ## options and it's defaults:
 
 	{
-	    googleMapsKey: '',
-	    googleMapsID: 'map',
-	    googleMapsOptions: {
-	      center: {
-	        lat: 51.98150,
-	        lng: 5.28434
-	      },
-	      zoom: 6
-	    },
-	    customIcon: false,
-	    customIconSize: false,
-	    customIconField: '',
-	    customIconSizeField: '',
-	    latLngFields: ['lat', 'lng'],
-	    fitBounds: false,
-	    data: {},
-	    dataRoot: 0,
-	    searchFields : ['title'],
-	    onClickMarker : null,
-	    distanceUnit : 'km',
-	    searchRadius : 50
+		googleMapsKey: '',
+		googleMapsID: 'map',
+		googleMapsOptions: {
+		center: {
+			lat: 51.98150,
+			lng: 5.28434
+		},
+			zoom: 6,
+		},
+		customIcon: false,
+		customIconSize: false,
+		customIconField: '',
+		customIconSizeField: '',
+		latLngFields: ['lat', 'lng'],
+		fitBounds: false,
+		data: {},
+		dataRoot: 0,
+		searchFields : ['title'],
+		onClickMarker : null,
+		distanceUnit : 'km',
+		searchRadius : 50,
+		drawSearchRadius : false
 	}
 
 ## Initialize plugin
@@ -116,7 +117,6 @@ __searchRadius__ : The radius used by the `closestMarkers` function
 ### ready
 Returns a callback when everything is loaded
 
-##### example:
     $('.storefinder').MarkerFinder('ready', function(data, map, markers){
         //ready for coding
     });
@@ -124,13 +124,11 @@ Returns a callback when everything is loaded
 ### getFilterValues (filterfield)
 Get all the values from a filter in the json
 
-##### example:
     $('.storefinder').MarkerFinder('getFilterValues', 'categories');
 
 ### closestMarkers (address)
 Find the closest marker within the searchRadius
 
-##### example:
     $('.storefinder').MarkerFinder('closestMarkers', 'address').done(function(data){
         console.debug(data);
     });
@@ -138,19 +136,16 @@ Find the closest marker within the searchRadius
 ### resetFilters
 Removes any filter on the markers, and show them all on the map
 
-##### example:
     $('.storefinder').MarkerFinder('resetFilters');
 
 ### filterData (filterfield, values)
 Filters the data by the given values
 
-##### example:
     $('.storefinder').MarkerFinder('filterData', 'categories', ['value', 'value2']);
 
 ### search (searchTerm, callback)
 Search trough the marker data within the given fields
 
-##### example:
     $('.storefinder').MarkerFinder('search', 'search_term', function(data){
         // do stuff with the data
     });
@@ -158,7 +153,6 @@ Search trough the marker data within the given fields
 ### setOption (optionName, value)
 Set a option after the plugin is initialized
 
-##### example:
     $('.storefinder').MarkerFinder('setOption', 'onClickMarker', function(data){
         //do your magic here
     });
@@ -166,8 +160,13 @@ Set a option after the plugin is initialized
 ### fitBounds (includeHiddenMarkers)
 Fits the bounds to the (visible) markers
 
-##### example:
     $('.storefinder').MarkerFinder('fitBounds');
+
+### removeSearchRadius
+Removes the visible search radius
+
+    $('.storefinder').MarkerFinder('removeSearchRadius');
+
 
 
 ###TODO'S
