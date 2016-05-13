@@ -31,16 +31,16 @@ this plugin can be used for building a custom storefinder or something with simi
     $('.storefinder').MarkerFinder(options);
 
 ## Options
-__googleMapsKey__ - Key for the Google Maps API (https://developers.google.com/maps/documentation/javascript/get-api-key)
-####example: 
+__googleMapsKey__ - Key for the Google Maps API [link](https://developers.google.com/maps/documentation/javascript/get-api-key)
+	
 	googleMapsKey: 'YOUR_API_KEY'
 
 __googleMapsID__ - ID attribute of the map DIV
-####example: 
+	
 	googleMapsID: 'map'
 
-__googleMapsOptions__ - All options here are passed trough the google maps object (https://developers.google.com/maps/documentation/javascript/tutorial)
-####example: 
+__googleMapsOptions__ - All options here are passed trough the google maps object [link](https://developers.google.com/maps/documentation/javascript/tutorial)
+
 	googleMapsOptions: {
 		center: {
 			lat: 51.98150,
