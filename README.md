@@ -11,7 +11,7 @@ this plugin can be used for building a custom storefinder or something with simi
 	        lat: 51.98150,
 	        lng: 5.28434
 	      },
-	      zoom: 6,
+	      zoom: 6
 	    },
 	    customIcon: false,
 	    customIconSize: false,
@@ -29,6 +29,25 @@ this plugin can be used for building a custom storefinder or something with simi
 
 ## Initialize plugin
     $('.storefinder').MarkerFinder(options);
+
+## Options
+__googleMapsKey__ - Key for the Google Maps API (https://developers.google.com/maps/documentation/javascript/get-api-key)
+####example: 
+	googleMapsKey: 'YOUR_API_KEY'
+
+__googleMapsID__ - ID attribute of the map DIV
+####example: 
+	googleMapsID: 'map'
+
+__googleMapsOptions__ - All options here are passed trough the google maps object (https://developers.google.com/maps/documentation/javascript/tutorial)
+####example: 
+	googleMapsOptions: {
+		center: {
+			lat: 51.98150,
+			lng: 5.28434
+		},
+		zoom: 6
+	}
 
 ## functions:
 
