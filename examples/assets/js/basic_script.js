@@ -9,6 +9,7 @@ $(function(){
 	            zoom: 6,
 	        },
 	    fitBounds: true,
+	    searchRadius: 5,
 	    data: 'assets/data/data.json',
 	    dataRoot: 'power_stations'
 	});
@@ -21,6 +22,9 @@ $(function(){
 		    $('.power_stations').MarkerFinder('closestMarkers', address, function(data){
 		    	console.debug(data);
 		    });
+		});
+		$('.radius_dd').change(function() {
+			$('.power_stations').MarkerFinder('setOption', 'searchRadius', parseInt($(this).val()));
 		});
 	});
 })

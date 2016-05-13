@@ -46,12 +46,16 @@ p{
 }
 
 .search_btn,
-.search_fld{
+.search_fld,
+.radius_dd{
 	border: none;
 	outline: none;
 	width: 100%;
 }
-
+.radius_dd{
+	height: 2.5rem;
+	background: #fff;
+}
 .search_btn{
 	line-height: 2.5rem;
 	color: #fff;
