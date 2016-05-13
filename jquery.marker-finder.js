@@ -24,7 +24,7 @@
     customIconSize: false,
     customIconField: '',
     customIconSizeField: '',
-    latLngKeys: ['lat', 'lng'],
+    latLngFields: ['lat', 'lng'],
     fitBounds: false,
     data: {},
     dataRoot: 0,
@@ -210,7 +210,7 @@
             return dfd;
           }
           _this.resetFilters();
-          result = _this._findClosestMarkers(data[_this.options.latLngKeys[0]], data[_this.options.latLngKeys[1]], hideMarkers);
+          result = _this._findClosestMarkers(data[_this.options.latLngFields[0]], data[_this.options.latLngFields[1]], hideMarkers);
           _this.prevAddress.result = result;
           dfd.resolve(result);
         });
@@ -303,7 +303,7 @@
       for (i = 0; i < this.data.length; i++) {
         data = this.data[i];
         marker_data = {
-          position: new google.maps.LatLng(data[this.options.latLngKeys[0]], data[this.options.latLngKeys[1]]),
+          position: new google.maps.LatLng(data[this.options.latLngFields[0]], data[this.options.latLngFields[1]]),
           map: this.map,
           title: data.title,
         };
