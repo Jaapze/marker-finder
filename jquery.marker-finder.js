@@ -20,15 +20,19 @@
       },
       zoom: 6,
     },
+    customIcon: false,
+    customIconSize: false,
+    customIconField: '',
+    customIconSizeField: '',
     latLngKeys: ['lat', 'lng'],
     fitBounds: false,
-    customIcon: false,
     data: {},
     dataRoot: 0,
     searchFields : ['title'],
     onClickMarker : null,
     distanceUnit : 'km',
     searchRadius : 50,
+
   },
   googleMapsLoaded = false,
   googleMapsDoneLoading = false,
@@ -187,16 +191,16 @@
           dfd = jQuery.Deferred(),
           hideMarkers = (hideMarkers === undefined)?true:hideMarkers,
           result = [];
-      if(value === '' || !value){
+      if(value === '' || !value) {
         // if value is empty
         this.resetFilters();
         dfd.resolve(result);
         return dfd;
-      } else if (this.prevAddress.name === value){
+      } else if (this.prevAddress.name === value) {
         // if the user clicks twice return prev result
         dfd.resolve(this.prevAddress.result);
         return dfd;
-      }else{
+      } else {
         this.prevAddress.name = value;
         this._getCoordsByString(value).done(function(data){
           if(!data){
@@ -295,15 +299,28 @@
     },
 
     _drawMarkers: function() {
-      var i;
+      var i, marker_data, data, marker, sizeParts;
       for (i = 0; i < this.data.length; i++) {
-        var data = this.data[i];
-        var marker = new google.maps.Marker({
+        data = this.data[i];
+        marker_data = {
           position: new google.maps.LatLng(data[this.options.latLngKeys[0]], data[this.options.latLngKeys[1]]),
           map: this.map,
-          title: data.title
-        });
-        if(this.options.customIcon) marker.setIcon(this.options.customIcon);
+          title: data.title,
+        };
+        if(this.options.customIconField != '' && this.options.customIconField) {
+          marker_data.icon = {};
+          marker_data.icon.url = data[this.options.customIconField];
+        }
+        else if(this.options.customIcon != '' && this.options.customIcon){
+          marker_data.icon = {};
+          marker_data.icon.url = data[this.options.customIcon];
+        }
+        if(marker_data.icon && (this.options.customIconSizeField != "" || this.options.customIconSize != "")){
+          sizeParts = (this.options.customIconSizeField != "") ? data[this.options.customIconSizeField].split(',') : this.options.customIconSize.split(',');
+          marker_data.icon.scaledSize = new google.maps.Size(parseInt(sizeParts[0]), parseInt(sizeParts[1]));
+        }
+        
+        marker = new google.maps.Marker(marker_data);
         marker.set('id', i);
         this.markers.push(marker);
       }
