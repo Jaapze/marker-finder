@@ -31,7 +31,7 @@ this plugin can be used for building a custom storefinder or something with simi
     $('.storefinder').MarkerFinder(options);
 
 ## Options
-__googleMapsKey__ : Key for the Google Maps API [link](https://developers.google.com/maps/documentation/javascript/get-api-key)
+__googleMapsKey__ : Key for the Google Maps API ([link](https://developers.google.com/maps/documentation/javascript/get-api-key))
 	
 	googleMapsKey : 'YOUR_API_KEY'
 
@@ -39,7 +39,7 @@ __googleMapsID__ : ID attribute of the map DIV
 	
 	googleMapsID : 'map'
 
-__googleMapsOptions__ : All options here are passed trough the google maps object [link](https://developers.google.com/maps/documentation/javascript/tutorial)
+__googleMapsOptions__ : All options here are passed trough the google maps object ([link](https://developers.google.com/maps/documentation/javascript/tutorial))
 
 	googleMapsOptions: {
 		center: {
@@ -76,7 +76,7 @@ __fitBounds__ : Fit bounds after the markers are loaded for the first time
 __data__ : Data for the markers on the map (json, or url to a json file)
 
 	data : '../data/data.json'
-
+	// OR YOU CAN USE DIRECT JSON DATA
 	data : {
 			"power_stations": [{
 				"icon": "assets/img/gas_icon.svg",
@@ -87,7 +87,7 @@ __data__ : Data for the markers on the map (json, or url to a json file)
 				"lat": 51.91017,
 				"lng": 4.423916
 			},
-			... etc.
+			...
 
 __dataRoot__ : The root of the data
 
