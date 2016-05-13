@@ -3,15 +3,32 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jQuery marker finder - basic example</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/basic_style.css">
 	</head>
 	<body>
-		
-		<div class="power_stations">
-		  <div id="map"></div>
+		<div class="container">
+			<div class="row">
+				<h1>MarkerFinder examples</h1>
+				<h2>Basic example</h2>
+				<p>In this example i used the basics of Marker Finder for mapping out some power stations in the Netherlands. By example you can search for the closest power stations by typing 'Amsterdam'.</p>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 filter">
+					<div class="col-md-10 col-sm-10"><input type="text" placeholder="address / postcode"></div>
+					<div class="col-md-2 col-sm-2"><button>Search</button></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="power_stations">
+				  <div id="map"></div>
+				</div>
+			</div>
 		</div>
 
+
 		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="../jquery.marker-finder.js"></script>
 		<script src="assets/js/basic_script.js"></script>
 	</body>

@@ -12,7 +12,15 @@ $(function(){
 	    data: 'assets/data/data.json',
 	    dataRoot: 'power_stations'
 	});
+
 	$('.power_stations').MarkerFinder('ready', function(data, map, markers){
-	    console.debug(data);
+		// trigger when clicking the search button
+		$('.filter button').on('click', function(){
+			// Do a search trough the data
+			var address = $('.filter input').val();
+		    $('.power_stations').MarkerFinder('closestMarkers', address, function(data){
+		    	console.debug(data);
+		    });
+		});
 	});
 })

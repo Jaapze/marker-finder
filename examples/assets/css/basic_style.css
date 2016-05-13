@@ -1,13 +1,60 @@
+html{
+	font-size: 110%;
+}
 body,
 html{
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	background: #f2f2f2;
+}
+body{
+	font-size: 1rem;
+}
+*{
+	box-sizing: border-box;
+}
+h1,h2{
+	margin: 0;
+	padding: 0;
+	margin: 1rem 0 1rem;
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	font-size: 2rem;
+}
+p{
+	line-height: 2rem;
 }
 
-#map,
-.power_stations{
+#map{
 	width: 100%;
 	height: 100%;
+}
+
+.power_stations{
+	height: 60vh;
+}
+
+.filter{
+	background: #FAA432;
+	line-height: 30px;
+	padding: 10px;
+}
+
+.filter button{
+	width: 100%;
+	line-height: 2.5rem;
+	background: #3878C7;
+	color: #fff;
+	border: none;
+}
+.filter input[type=text]{
+	padding: 0 20px;
+	width: 100%;
+	line-height: 2.5rem;
+	border: none;
 }
