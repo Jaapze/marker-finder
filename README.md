@@ -4,28 +4,28 @@ this plugin can be used for building a custom storefinder or something with simi
 ## options and it's defaults:
 
 	{
-    googleMapsKey: '',
-    googleMapsID: 'map',
-    googleMapsOptions: {
-      center: {
-        lat: 51.98150,
-        lng: 5.28434
-      },
-      zoom: 6,
-    },
-    customIcon: false,
-    customIconSize: false,
-    customIconField: '',
-    customIconSizeField: '',
-    latLngKeys: ['lat', 'lng'],
-    fitBounds: false,
-    data: {},
-    dataRoot: 0,
-    searchFields : ['title'],
-    onClickMarker : null,
-    distanceUnit : 'km',
-    searchRadius : 50
-  }
+	    googleMapsKey: '',
+	    googleMapsID: 'map',
+	    googleMapsOptions: {
+	      center: {
+	        lat: 51.98150,
+	        lng: 5.28434
+	      },
+	      zoom: 6,
+	    },
+	    customIcon: false,
+	    customIconSize: false,
+	    customIconField: '',
+	    customIconSizeField: '',
+	    latLngKeys: ['lat', 'lng'],
+	    fitBounds: false,
+	    data: {},
+	    dataRoot: 0,
+	    searchFields : ['title'],
+	    onClickMarker : null,
+	    distanceUnit : 'km',
+	    searchRadius : 50
+	}
 
 ## Initialize plugin
     $('.storefinder').MarkerFinder(options);
