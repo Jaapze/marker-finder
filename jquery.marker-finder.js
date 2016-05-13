@@ -138,6 +138,11 @@
     
     setOption: function(optionName, value){
       this.options[optionName] = value;
+      // reset previeus searched
+      this.prevAddress = {
+        name : '',
+        result : {},
+      };
     },
     
     filterData: function(filter, values, reset){
