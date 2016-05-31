@@ -1,6 +1,8 @@
 #Marker finder plugin for jQuery
 this plugin can be used for building a custom storefinder or something with similar functionalities.
 
+[Basic example](http://www.atticweb.nl/marker-finder/examples/basic.html)
+
 ## options and it's defaults:
 
 	{
